@@ -5,13 +5,13 @@ function onFormSubmit(event) {
   event.preventDefault();
   const formElements = event.currentTarget.elements;
 
-  if (formElements.email.value && formElements.password.value === "") {
+  if (formElements.email.value === "" || formElements.password.value === "") {
     return alert("Всі поля повинні бути заповнені");
   }
   //   const formData = new FormData(event.currentTarget);
   const email = formElements.email.value;
   const password = formElements.password.value;
-  console.log(email, password);
+  console.log("email:", email, "password:", password);
 
   event.currentTarget.reset();
 }
