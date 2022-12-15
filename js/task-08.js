@@ -9,9 +9,10 @@ function onFormSubmit(event) {
     return alert("Всі поля повинні бути заповнені");
   }
   //   const formData = new FormData(event.currentTarget);
-  const email = formElements.email.value;
-  const password = formElements.password.value;
-  console.log("email:", email, "password:", password);
-
+  const data = {
+    email: formElements.email.value,
+    password: formElements.password.value,
+  };
+  console.log(data);
   event.currentTarget.reset();
 }
